@@ -1,9 +1,20 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { DefaultTheme, defineConfig } from "vitepress";
+import { groupIconMdPlugin, groupIconVitePlugin } from "vitepress-plugin-group-icons";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "Echo UI",
-  description: "A vue UI library",
+  description: "A Vue UI library",
+  srcExclude: ["**/parts/**.md"],
+  markdown: {
+    config(md) {
+      md.use(groupIconMdPlugin);
+    },
+  },
+  vite: {
+    plugins: [groupIconVitePlugin() as any],
+  },
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
@@ -13,7 +24,29 @@ export default defineConfig({
 
     sidebar: getSidebar(),
 
-    socialLinks: [{ icon: "github", link: "https://github.com/vuejs/vitepress" }],
+    editLink: {
+      pattern: "https://github.com/echo-vue-ui/echo-ui/edit/main/docs/:path",
+      text: "Suggest changes to this page",
+    },
+
+    lastUpdated: {
+      text: "Updated at",
+      formatOptions: {
+        dateStyle: "short",
+        timeStyle: "medium",
+      },
+    },
+
+    footer: {
+      message: "Released under the MIT License.",
+      copyright: `Copyright © 2022-${new Date().getFullYear()} Wesley Araújo`,
+    },
+
+    search: {
+      provider: "local",
+    },
+
+    socialLinks: [{ icon: "github", link: "https://github.com/echo-vue-ui/echo-ui" }],
   },
 });
 
