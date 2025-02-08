@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { DefaultTheme, defineConfig } from "vitepress";
+import { type DefaultTheme, defineConfig } from "vitepress";
 import { groupIconMdPlugin, groupIconVitePlugin } from "vitepress-plugin-group-icons";
 
 // https://vitepress.dev/reference/site-config
@@ -50,16 +50,21 @@ export default defineConfig({
   },
 });
 
-function getSidebar(): DefaultTheme.Sidebar {
+function getSidebar(): DefaultTheme.SidebarItem[] {
   return [
     {
       text: "Introduction",
       base: "/guide",
-      collapsed: false,
       items: [
-        { text: "Why Echo UI?", link: "/guide/why-echo-ui" },
-        { text: "Installation", link: "/guide/installation" },
+        { text: "What is Echo UI?", link: "/what-is-echo-ui/" },
+        { text: "Installation", link: "/installation/" },
       ],
+    },
+    {
+      text: "Components",
+      base: "/components",
+      collapsed: false,
+      items: [{ text: "Button", link: "/button/" }],
     },
   ];
 }
