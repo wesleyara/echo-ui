@@ -22,9 +22,12 @@ bun add echo-ui
 
 :::
 
-Once installed, you can import the CSS file in your project's entry file.
+Once installed, you can import the CSS file in your project's entry file and import theme component in your App
 
-```ts
+
+::: code-group
+
+```ts [main.ts]
 import { createApp } from 'vue'
 import App from './App.vue'
 
@@ -32,6 +35,20 @@ import "echo-ui/dist/echo-ui.css" // [!code ++]
 
 createApp(App).mount('#app')
 ```
+
+```vue{2,6,8} [App.vue]
+<script setup lang="ts">
+import { EchoTheme } from 'echo-ui'
+</script>
+
+<template>
+  <EchoTheme>
+    <router-view />
+  </EchoTheme>
+</template>
+```
+
+:::
 
 After that, you can start using the components in your Vue components.
 
