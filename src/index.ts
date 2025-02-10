@@ -1,3 +1,3 @@
 import "./styles/main.css";
 
-export { default as EchoButton } from "./components/EchoButton.vue";
+export { EchoTheme } from "./components/EchoTheme";
