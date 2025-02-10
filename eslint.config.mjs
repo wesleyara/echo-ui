@@ -61,6 +61,7 @@ export default [
       "tailwindcss/enforces-shorthand": "error",
       "tailwindcss/no-contradicting-classname": "error",
       "tailwindcss/no-unnecessary-arbitrary-value": "error",
+      "tailwindcss/no-custom-classname": "off"
     },
   },
 ];
