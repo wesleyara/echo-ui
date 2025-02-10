@@ -1,3 +1,4 @@
 import "./styles/main.css";
 
-export { EchoTheme } from "./components/EchoTheme";
+export { EchoTheme, type EchoThemeProps } from "./components/EchoTheme";
+export { EchoIcon, type EchoIconProps } from "./components/EchoIcon";
