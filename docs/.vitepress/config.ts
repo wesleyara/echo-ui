@@ -1,4 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
+import { resolve } from "path";
 import { type DefaultTheme, defineConfig } from "vitepress";
 import { groupIconMdPlugin, groupIconVitePlugin } from "vitepress-plugin-group-icons";
 
@@ -14,6 +15,11 @@ export default defineConfig({
   },
   vite: {
     plugins: [groupIconVitePlugin() as any],
+    resolve: {
+      alias: {
+        "@": resolve(__dirname, "../../src"),
+      },
+    },
   },
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
