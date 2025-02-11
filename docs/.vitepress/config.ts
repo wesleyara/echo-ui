@@ -5,6 +5,7 @@ import { groupIconMdPlugin, groupIconVitePlugin } from "vitepress-plugin-group-i
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+  lang: "en-US",
   title: "Echo UI",
   description: "A Vue UI library",
   srcExclude: ["**/parts/**.md"],
@@ -61,6 +62,7 @@ function getSidebar(): DefaultTheme.SidebarItem[] {
     {
       text: "Introduction",
       base: "/guide",
+      collapsed: false,
       items: [
         { text: "What is Echo UI?", link: "/what-is-echo-ui/" },
         { text: "Installation", link: "/installation/" },
