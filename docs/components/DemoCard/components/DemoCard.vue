@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed } from "vue";
 
-import { cn } from "../../../../../src/lib/utils.ts";
+import { cn } from "../../../../src/lib/utils.ts";
 
 const props = defineProps<{ cardClasses?: string }>();
 
@@ -23,7 +23,7 @@ const getCardClasses = computed(() => {
 </script>
 
 <template>
-  <section class="flex flex-col rounded-lg border border-[var(--echo-ui-disabled)]">
+  <section class="flex min-h-[300px] flex-col rounded-lg border border-[var(--echo-ui-disabled)]">
     <span :class="getCardClasses">
       <slot />
     </span>

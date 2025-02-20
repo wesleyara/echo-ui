@@ -43,7 +43,7 @@ import { EchoTheme } from 'echo-ui'
 
 <template>
   <EchoTheme>
-    <router-view />
+    <!-- Your app here -->
   </EchoTheme>
 </template>
 ```

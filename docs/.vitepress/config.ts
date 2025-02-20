@@ -9,6 +9,7 @@ export default defineConfig({
   title: "Echo UI",
   description: "A Vue UI library",
   srcExclude: ["**/parts/**.md"],
+  srcDir: "src",
   markdown: {
     config(md) {
       md.use(groupIconMdPlugin);
@@ -66,6 +67,7 @@ function getSidebar(): DefaultTheme.SidebarItem[] {
       items: [
         { text: "What is Echo UI?", link: "/what-is-echo-ui/" },
         { text: "Installation", link: "/installation/" },
+        { text: "Theme", link: "/theme/" },
       ],
     },
     {
