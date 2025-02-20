@@ -1,4 +1,4 @@
-export interface ThemeOptions {
+export interface EchoThemeOptions {
   colors: Record<string, Partial<ColorsVariants>>;
   sizes: {
     xs: SizesInfo;

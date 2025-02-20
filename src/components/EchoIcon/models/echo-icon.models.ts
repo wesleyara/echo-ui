@@ -1,7 +1,7 @@
-import { ThemeOptions } from "@/theme/models/theme.models";
+import { EchoThemeOptions } from "@/theme/models/theme.models";
 
 export interface EchoIconProps {
   icon: string;
-  size?: keyof ThemeOptions["sizes"];
+  size?: keyof EchoThemeOptions["sizes"];
   type?: "outlined" | "rounded" | "sharp";
 }

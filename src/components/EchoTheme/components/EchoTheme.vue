@@ -1,18 +1,23 @@
 <script setup lang="ts">
-import { themeOptions } from "@/theme";
-import { ThemeOptions } from "@/theme/models/theme.models";
+import { echoThemeOptions } from "@/theme";
+import { EchoThemeOptions } from "@/theme/models/theme.models";
 import { onBeforeMount, provide, watch } from "vue";
+
+import { EchoThemeProps } from "../models/echo-theme.models";
 
 const modelValue = defineModel({
   default: "dark",
   type: String,
 });
 
-provide("EchoThemeOptions", themeOptions);
+const props = withDefaults(defineProps<EchoThemeProps>(), {
+  customTheme: () => echoThemeOptions,
+});
 
-const generateClassAndVar = (colors: ThemeOptions["colors"]) => {
+provide("EchoThemeOptions", props.customTheme);
+
+const generateClassAndVar = (colors: EchoThemeOptions["colors"]) => {
   const variables = [];
-  const classes = [];
 
   for (const color in colors) {
     let colorRef = color;
@@ -32,25 +37,17 @@ const generateClassAndVar = (colors: ThemeOptions["colors"]) => {
 
       if (variantValue === "default") {
         const variable = `--echo-ui-${colorRef}: ${colorVariants[variantValue]};`;
-        const textClass = `.echo-ui-text-${colorRef} { color: var(--echo-ui-${colorRef}); }`;
-        const bgClass = `.echo-ui-bg-${colorRef} { background-color: var(--echo-ui-${colorRef}); }`;
-        const borderClass = `.echo-ui-border-${colorRef} { border-color: var(--echo-ui-${colorRef}); }`;
 
         variables.push(variable);
-        classes.push(textClass, bgClass, borderClass);
       } else {
         const variable = `--echo-ui-${colorRef}-${variantValue}: ${colorVariants[variantValue]};`;
-        const textClass = `.echo-ui-text-${colorRef}-${variantValue} { color: var(--echo-ui-${colorRef}-${variantValue}); }`;
-        const bgClass = `.echo-ui-bg-${colorRef}-${variantValue} { background-color: var(--echo-ui-${colorRef}-${variantValue}); }`;
-        const borderClass = `.echo-ui-border-${colorRef}-${variantValue} { border-color: var(--echo-ui-${colorRef}-${variantValue}); }`;
 
         variables.push(variable);
-        classes.push(textClass, bgClass, borderClass);
       }
     }
   }
 
-  return { variables, classes };
+  return { variables };
 };
 
 onBeforeMount(() => {
@@ -67,11 +64,11 @@ watch(
   modelValue,
   value => {
     localStorage.setItem("EchoTheme", value);
-    const { classes, variables } = generateClassAndVar(themeOptions.colors);
+    const { variables } = generateClassAndVar(echoThemeOptions.colors);
 
     document.head.appendChild(
       Object.assign(document.createElement("style"), {
-        textContent: `:root { ${variables.join(" ")} } ${classes.join(" ")}`,
+        textContent: `:root { ${variables.join(" ")} }`,
       }),
     );
   },

@@ -1,6 +1,6 @@
-import { ThemeOptions } from "./models/theme.models";
+import { EchoThemeOptions } from "./models/theme.models";
 
-export const themeOptions: ThemeOptions = {
+export const echoThemeOptions: EchoThemeOptions = {
   colors: {
     primary: {
       default: "#1b1b1f",

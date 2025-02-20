@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { EchoIcon } from "@/components/EchoIcon";
 import { cn } from "@/lib/utils";
-import { ThemeOptions } from "@/theme/models/theme.models";
+import { EchoThemeOptions } from "@/theme/models/theme.models";
 import { computed, inject } from "vue";
 
 import { EchoButtonProps } from "../models/echo-button.models";
@@ -12,7 +12,7 @@ const props = withDefaults(defineProps<EchoButtonProps>(), {
   iconPosition: "left",
 });
 
-const echoThemeOptions = inject("EchoThemeOptions") as ThemeOptions;
+const echoThemeOptions = inject("EchoThemeOptions") as EchoThemeOptions;
 
 const isDisabled = computed(() => (props.disabled ? "disabled" : "enabled"));
 

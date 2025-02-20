@@ -1,3 +1,5 @@
+import { EchoThemeOptions } from "@/theme/models/theme.models";
+
 export interface EchoThemeProps {
-  theme?: "dark" | "light";
+  customTheme?: EchoThemeOptions;
 }

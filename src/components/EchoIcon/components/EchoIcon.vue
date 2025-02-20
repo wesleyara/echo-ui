@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ThemeOptions } from "@/theme/models/theme.models";
+import { EchoThemeOptions } from "@/theme/models/theme.models";
 import { computed, inject } from "vue";
 
 import { EchoIconProps } from "../models/echo-icon.models";
@@ -9,7 +9,7 @@ const props = withDefaults(defineProps<EchoIconProps>(), {
   size: "md",
 });
 
-const echoThemeOptions = inject("EchoThemeOptions") as ThemeOptions;
+const echoThemeOptions = inject("EchoThemeOptions") as EchoThemeOptions;
 
 const getIconStyles = computed(() => {
   const sizes = echoThemeOptions.sizes;
