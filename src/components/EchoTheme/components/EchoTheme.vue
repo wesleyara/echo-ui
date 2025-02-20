@@ -1,13 +1,12 @@
 <script setup lang="ts">
 import { echoThemeOptions } from "@/theme";
-import { EchoThemeOptions } from "@/theme/models/theme.models";
+import { EchoThemeMode, EchoThemeOptions } from "@/theme/models/theme.models";
 import { onBeforeMount, provide, watch } from "vue";
 
 import { EchoThemeProps } from "../models/echo-theme.models";
 
-const modelValue = defineModel({
+const modelValue = defineModel<EchoThemeMode>({
   default: "dark",
-  type: String,
 });
 
 const props = withDefaults(defineProps<EchoThemeProps>(), {
@@ -56,14 +55,14 @@ onBeforeMount(() => {
   if (themeSelected && (themeSelected === "dark" || themeSelected === "light")) {
     modelValue.value = themeSelected;
   } else {
-    localStorage.setItem("EchoTheme", modelValue.value);
+    localStorage.setItem("EchoTheme", modelValue.value as EchoThemeMode);
   }
 });
 
 watch(
   modelValue,
   value => {
-    localStorage.setItem("EchoTheme", value);
+    localStorage.setItem("EchoTheme", value as EchoThemeMode);
     const { variables } = generateClassAndVar(echoThemeOptions.colors);
 
     document.head.appendChild(

@@ -1,3 +1,5 @@
+export type EchoThemeMode = "dark" | "light";
+
 export interface EchoThemeOptions {
   colors: Record<string, Partial<ColorsVariants>>;
   sizes: {
