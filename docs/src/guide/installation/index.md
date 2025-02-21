@@ -31,14 +31,14 @@ Once installed, you can import the CSS file in your project's entry file and imp
 import { createApp } from 'vue'
 import App from './App.vue'
 
-import "echo-ui/dist/echo-ui.css" // [!code ++]
+import "echo-vue-ui/dist/echo-ui.css" // [!code ++]
 
 createApp(App).mount('#app')
 ```
 
 ```vue{2,6,8} [App.vue]
 <script setup lang="ts">
-import { EchoTheme } from 'echo-ui'
+import { EchoTheme } from "echo-vue-ui";
 </script>
 
 <template>
@@ -54,7 +54,7 @@ After that, you can start using the components in your Vue components.
 
 ```vue
 <setup script lang="ts">
-import { EchoButton } from 'echo-ui'
+import { EchoButton } from "echo-vue-ui";
 </setup>
 
 <template>
