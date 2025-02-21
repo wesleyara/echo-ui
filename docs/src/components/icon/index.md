@@ -17,7 +17,7 @@ The `EchoIcon` component is used to display icons within the user interface.
 
 ```vue [index.vue]
 <script setup lang="ts">
-import { EchoIcon } from "echo-ui";
+import { EchoIcon } from "echo-vue-ui";
 </script>
 
 <template>
@@ -43,7 +43,7 @@ import { EchoIcon } from "echo-ui";
 
 ```vue [index.vue]
 <script setup lang="ts">
-import { EchoIcon } from "echo-ui";
+import { EchoIcon } from "echo-vue-ui";
 </script>
 
 <template>
@@ -59,7 +59,7 @@ import { EchoIcon } from "echo-ui";
 
 ```vue [index.vue]
 <script setup lang="ts">
-import { EchoIcon } from "echo-ui";
+import { EchoIcon } from "echo-vue-ui";
 </script>
 
 <template>
@@ -75,7 +75,7 @@ import { EchoIcon } from "echo-ui";
 
 ```vue [index.vue]
 <script setup lang="ts">
-import { EchoIcon } from "echo-ui";
+import { EchoIcon } from "echo-vue-ui";
 </script>
 
 <template>

@@ -8,7 +8,7 @@ Using the `v-model` prop, you can change the theme of your application.
 
 ```vue [App.vue]
 <script setup lang="ts">
-import { EchoTheme, EchoThemeMode } from "echo-ui";
+import { EchoTheme, EchoThemeMode } from "echo-vue-ui";
 import { ref } from "vue";
 
 const theme = ref<EchoThemeMode>("dark");
@@ -25,7 +25,7 @@ Using the `customOptions` prop, you can override the default theme options.
 
 ```vue [App.vue]
 <script setup lang="ts">
-import { EchoTheme, EchoThemeOptions, echoThemeOptions } from "echo-ui";
+import { EchoTheme, EchoThemeOptions, echoThemeOptions } from "echo-vue-ui";
 
 const customOptions: EchoThemeOptions = {
   ...echoThemeOptions,
@@ -55,7 +55,7 @@ The default size is `md`, and the property receive the type `EchoThemeOptionsSiz
 
 ```vue [index.vue] ts{6}
 <script setup lang="ts">
-import { EchoIcon } from "echo-ui";
+import { EchoIcon } from "echo-vue-ui";
 </script>
 
 <template>

@@ -16,7 +16,7 @@ The `EchoButton` component is a button component that can be used to trigger act
 
 ```vue
 <script setup lang="ts">
-import { EchoButton } from "echo-ui";
+import { EchoButton } from "echo-vue-ui";
 </script>
 
 <template>
@@ -52,7 +52,7 @@ import { EchoButton } from "echo-ui";
 
 ```vue [index.vue]
 <script setup lang="ts">
-import { EchoButton } from "echo-ui";
+import { EchoButton } from "echo-vue-ui";
 </script>
 
 <template>
@@ -68,7 +68,7 @@ import { EchoButton } from "echo-ui";
 
 ```vue [index.vue]
 <script setup lang="ts">
-import { EchoButton } from "echo-ui";
+import { EchoButton } from "echo-vue-ui";
 </script>
 
 <template>
@@ -84,7 +84,7 @@ import { EchoButton } from "echo-ui";
 
 ```vue [index.vue]
 <script setup lang="ts">
-import { EchoButton } from "echo-ui";
+import { EchoButton } from "echo-vue-ui";
 </script>
 
 <template>
@@ -100,7 +100,7 @@ import { EchoButton } from "echo-ui";
 
 ```vue [index.vue]
 <script setup lang="ts">
-import { EchoButton } from "echo-ui";
+import { EchoButton } from "echo-vue-ui";
 </script>
 
 <template>
@@ -116,7 +116,7 @@ import { EchoButton } from "echo-ui";
 
 ```vue [index.vue]
 <script setup lang="ts">
-import { EchoButton } from "echo-ui";
+import { EchoButton } from "echo-vue-ui";
 </script>
 
 <template>
@@ -132,7 +132,7 @@ import { EchoButton } from "echo-ui";
 
 ```vue [index.vue]
 <script setup lang="ts">
-import { EchoButton } from "echo-ui";
+import { EchoButton } from "echo-vue-ui";
 </script>
 
 <template>
