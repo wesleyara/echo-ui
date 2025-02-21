@@ -5,19 +5,19 @@ To install Echo UI in a Vue project, you can use your favorite package manager.
 ::: code-group
 
 ```bash [npm]
-npm install echo-ui
+npm install echo-vue-ui
 ```
 
 ```bash [yarn]
-yarn add echo-ui
+yarn add echo-vue-ui
 ```
 
 ```bash [pnpm]
-pnpm add echo-ui
+pnpm add echo-vue-ui
 ```
 
 ```bash [bun]
-bun add echo-ui
+bun add echo-vue-ui
 ```
 
 :::
