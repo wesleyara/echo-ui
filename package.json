@@ -21,10 +21,13 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build && vue-tsc --emitDeclarationOnly",
+    "lint": "eslint src",
+    "lint:fix": "eslint src --fix",
     "preview": "vite preview",
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
-    "docs:preview": "vitepress preview docs"
+    "docs:preview": "vitepress preview docs",
+    "postversion": "git push && git push --tags && rm -rf build/temp"
   },
   "dependencies": {
     "@vueuse/core": "^10.11.0",
