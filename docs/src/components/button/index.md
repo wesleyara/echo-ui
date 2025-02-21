@@ -92,6 +92,22 @@ import { EchoButton } from "echo-ui";
 </template>
 ```
 
+### Text Button
+
+<DemoCard>
+  <EchoButton variant="text">Click me</EchoButton>
+</DemoCard>
+
+```vue [index.vue]
+<script setup lang="ts">
+import { EchoButton } from "echo-ui";
+</script>
+
+<template>
+  <EchoButton variant="text">Click me</EchoButton>
+</template>
+```
+
 ### Icon Left Button
 
 <DemoCard>
@@ -109,7 +125,6 @@ import { EchoButton } from "echo-ui";
 ```
 
 ### Icon Right Button
-
 
 <DemoCard>
   <EchoButton icon="check" icon-position="right">Click me</EchoButton>
