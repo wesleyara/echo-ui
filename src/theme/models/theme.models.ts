@@ -1,17 +1,13 @@
 export type EchoThemeMode = "dark" | "light";
 
 export interface EchoThemeOptions {
-  colors: Record<string, Partial<ColorsVariants>>;
-  sizes: {
-    xs: SizesInfo;
-    sm: SizesInfo;
-    md: SizesInfo;
-    lg: SizesInfo;
-    xl: SizesInfo;
-  };
+  colors: EchoThemeOptionsColors;
+  sizes: EchoThemeOptionsSizes;
 }
 
-type ColorsVariants = {
+export type EchoThemeOptionsColors = Record<string, Partial<EchoThemeOptionsColorsVariants>>;
+
+export type EchoThemeOptionsColorsVariants = {
   default: string;
   50: string;
   100: string;
@@ -26,7 +22,10 @@ type ColorsVariants = {
   950: string;
 };
 
-type SizesInfo = {
+export type EchoThemeOptionsSizes = Record<string, EchoThemeOptionsSizesInfo>;
+
+export type EchoThemeOptionsSizesInfo = {
   size: number;
+  iconSize: number;
   class: string;
 };

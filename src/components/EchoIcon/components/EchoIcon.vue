@@ -14,8 +14,10 @@ const echoThemeOptions = inject("EchoThemeOptions") as EchoThemeOptions;
 const getIconStyles = computed(() => {
   const sizes = echoThemeOptions.sizes;
 
+  const size = sizes[props.size].iconSize;
+
   return {
-    fontSize: sizes[props.size].size,
+    fontSize: `${size}px`,
   };
 });
 

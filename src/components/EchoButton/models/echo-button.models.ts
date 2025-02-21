@@ -1,12 +1,11 @@
-import { EchoThemeOptions } from "@/theme/models/theme.models";
 import { ButtonHTMLAttributes, HTMLAttributes } from "vue";
 
 export interface EchoButtonProps extends /* @vue-ignore */ ButtonHTMLAttributes {
   variant?: EchoButtonVariant;
-  size?: keyof EchoThemeOptions["sizes"];
+  size?: string;
   icon?: string;
   iconPosition?: "left" | "right";
-  iconSize?: keyof EchoThemeOptions["sizes"];
+  iconSize?: string;
   class?: HTMLAttributes["class"];
   disabled?: boolean;
 }

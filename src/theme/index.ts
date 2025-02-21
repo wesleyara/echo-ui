@@ -37,23 +37,33 @@ export const echoThemeOptions: EchoThemeOptions = {
   sizes: {
     xs: {
       size: 12,
+      iconSize: 16,
       class: "text-[12px]",
     },
     sm: {
       size: 14,
+      iconSize: 20,
       class: "text-sm",
     },
     md: {
       size: 16,
+      iconSize: 24,
       class: "text-base",
     },
     lg: {
       size: 18,
+      iconSize: 28,
       class: "text-lg",
     },
     xl: {
       size: 20,
+      iconSize: 32,
       class: "text-xl",
+    },
+    xxl: {
+      size: 22,
+      iconSize: 36,
+      class: "text-2xl",
     },
   },
 };
