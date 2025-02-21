@@ -31,7 +31,7 @@ Once installed, you can import the CSS file in your project's entry file and imp
 import { createApp } from 'vue'
 import App from './App.vue'
 
-import "echo-vue-ui/dist/echo-ui.css" // [!code ++]
+import "echo-vue-ui/dist/style.css" // [!code ++]
 
 createApp(App).mount('#app')
 ```
