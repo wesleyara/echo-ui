@@ -8,10 +8,10 @@ Using the `v-model` prop, you can change the theme of your application.
 
 ```vue [App.vue]
 <script setup lang="ts">
-import { EchoTheme } from "echo-ui";
+import { EchoTheme, EchoThemeMode } from "echo-ui";
 import { ref } from "vue";
 
-const theme = ref("dark");
+const theme = ref<EchoThemeMode>("dark");
 </script>
 
 <template>
@@ -25,7 +25,7 @@ Using the `customOptions` prop, you can override the default theme options.
 
 ```vue [App.vue]
 <script setup lang="ts">
-import { EchoTheme, EchoThemeOptions } from "echo-ui";
+import { EchoTheme, EchoThemeOptions, echoThemeOptions } from "echo-ui";
 
 const customOptions: EchoThemeOptions = {
   ...echoThemeOptions,
@@ -46,6 +46,24 @@ const customOptions: EchoThemeOptions = {
 |------------------|-----------|-----------------------------------------------------------------------|
 | `modelValue`     | `dark`    | `'dark' \| 'light'` <br> The current theme applied.                   |
 | `customOptions`  | `-`       | `EchoThemeOptions` <br> The theme options to apply to the theme.      |
+
+## Sizes
+
+Echo UI provides a set of sizes that can be used to customize the look and feel of your application. 
+
+The default size is `md`, and the property receive the type `EchoThemeOptionsSizes`. By default, the sizes are: `xs`, `sm`, `md`, `lg`, `xl` and `xxl`.
+
+```vue [index.vue] ts{6}
+<script setup lang="ts">
+import { EchoIcon } from "echo-ui";
+</script>
+
+<template>
+  <EchoIcon icon="check" size="lg" />
+</template>
+```
+
+You can also customize the sizes using the `customOptions` prop, implementing new sizes or overriding the default ones.
 
 ## About dark and light mode
 

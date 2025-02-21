@@ -74,7 +74,10 @@ function getSidebar(): DefaultTheme.SidebarItem[] {
       text: "Components",
       base: "/components",
       collapsed: false,
-      items: [{ text: "Button", link: "/button/" }],
+      items: [
+        { text: "Button", link: "/button/" },
+        { text: "Icon", link: "/icon/" },
+      ],
     },
   ];
 }
