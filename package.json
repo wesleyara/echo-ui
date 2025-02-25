@@ -37,6 +37,7 @@
   },
   "dependencies": {
     "@vueuse/core": "^10.11.0",
+    "@wdns/vue-code-block": "^2.3.5",
     "clsx": "^2.1.1",
     "material-symbols": "^0.28.1",
     "pinia": "^2.1.7",
@@ -52,7 +53,6 @@
     "@types/node": "^22.13.1",
     "@vitejs/plugin-vue": "^5.0.5",
     "autoprefixer": "^10.4.19",
-    "cp": "^0.2.0",
     "eslint": "^9.19.0",
     "eslint-config-prettier": "^10.0.1",
     "eslint-plugin-perfectionist": "^4.8.0",
