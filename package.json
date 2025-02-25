@@ -27,7 +27,13 @@
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
     "docs:preview": "vitepress preview docs",
-    "postversion": "git push && git push --tags && rm -rf build/temp"
+    "postversion": "git push && git push --tags && rm -rf build/temp",
+    "prepare": "husky"
+  },
+  "lint-staged": {
+    "src/**/*.{js,ts,jsx,tsx}": [
+      "eslint src --fix"
+    ]
   },
   "dependencies": {
     "@vueuse/core": "^10.11.0",
@@ -40,6 +46,8 @@
     "vue-router": "4"
   },
   "devDependencies": {
+    "@commitlint/cli": "^19.7.1",
+    "@commitlint/config-conventional": "^19.7.1",
     "@eslint/js": "^9.19.0",
     "@types/node": "^22.13.1",
     "@vitejs/plugin-vue": "^5.0.5",
@@ -55,6 +63,8 @@
     "eslint-plugin-tailwindcss": "^3.18.0",
     "eslint-plugin-vue": "^9.32.0",
     "globals": "^15.14.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.4.3",
     "postcss": "^8.4.38",
     "prettier": "^3.4.2",
     "prettier-plugin-tailwindcss": "^0.6.5",
