@@ -62,6 +62,20 @@ export default [
       "tailwindcss/no-contradicting-classname": "error",
       "tailwindcss/no-unnecessary-arbitrary-value": "error",
       "tailwindcss/no-custom-classname": "off",
+      "vue/block-order": [
+        "error",
+        {
+          order: ["script", "template", "style"],
+        },
+      ],
+      "vue/block-lang": [
+        "error",
+        {
+          script: {
+            lang: "ts",
+          },
+        },
+      ],
     },
   },
 ];
