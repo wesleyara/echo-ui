@@ -17,3 +17,12 @@ export { echoThemeOptions } from "./theme/index";
 export { EchoTheme, type EchoThemeProps } from "./components/EchoTheme";
 export { EchoIcon, type EchoIconProps } from "./components/EchoIcon";
 export { EchoButton, type EchoButtonProps, type EchoButtonVariant } from "./components/EchoButton";
+export {
+  EchoGrid,
+  EchoGridRow,
+  EchoGridCol,
+  type EchoGridProps,
+  type EchoGridRowProps,
+  type EchoGridColProps,
+  type EchoGridColSize,
+} from "./components/EchoGrid";

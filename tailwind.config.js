@@ -1,3 +1,5 @@
+import { twSafelist } from "./src/lib/constants";
+
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ["./src/**/*.{vue,js,ts,jsx,tsx}", "./docs/**/*.{vue,html,md}"],
@@ -38,4 +40,5 @@ export default {
     },
   },
   plugins: [],
+  safelist: twSafelist,
 };

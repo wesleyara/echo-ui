@@ -77,6 +77,7 @@ function getSidebar(): DefaultTheme.SidebarItem[] {
       items: [
         { text: "Button", link: "/button/" },
         { text: "Icon", link: "/icon/" },
+        { text: "Grid", link: "/grid/" },
       ],
     },
   ];
